@@ -48,10 +48,10 @@ Temporary Items
 /App
 
 ### Directories ###
-Library
 Temp
-Obj
 App
 Build
 Builds
 TempLibrary
+Library
+obj
