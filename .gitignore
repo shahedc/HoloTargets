@@ -46,3 +46,12 @@ Network Trash Folder
 Temporary Items
 .apdisk
 /App
+
+### Directories ###
+/Library
+/Temp
+/Obj
+/App
+/Build
+/Builds
+/TempLibrary

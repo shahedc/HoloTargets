@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.VR.WSA;
+using UnityEngine.XR.WSA;
 
-public class SpatialMapping : MonoBehaviour {
+public class SpatialMapping : MonoBehaviour
+{
 
     public static SpatialMapping Instance { private set; get; }
 
@@ -13,7 +14,7 @@ public class SpatialMapping : MonoBehaviour {
 
     [Tooltip("If true, the Spatial Mapping data will be rendered.")]
     public bool drawVisualMeshes = false;
-    
+
     // If true, Spatial Mapping will be enabled. 
     private bool mappingEnabled = true;
 
@@ -41,16 +42,16 @@ public class SpatialMapping : MonoBehaviour {
 
             if (drawVisualMeshes)
             {
-                spatialMappingRenderer.currentRenderSetting = SpatialMappingRenderer.RenderSetting.CustomMaterial;
-                spatialMappingRenderer.customMaterial = DrawMaterial;
+                spatialMappingRenderer.visualMaterial = DrawMaterial;
+                spatialMappingRenderer.renderState = SpatialMappingRenderer.RenderState.Visualization;
             }
             else
             {
-                spatialMappingRenderer.currentRenderSetting = SpatialMappingRenderer.RenderSetting.None;
+                spatialMappingRenderer.renderState = SpatialMappingRenderer.RenderState.None;
             }
         }
     }
- 
+
     /// <summary>
     /// Enables/disables spatial mapping rendering and collision.
     /// </summary>
